@@ -61,35 +61,35 @@ PATH: /run/current-system/sw/bin/
 ## Core tests. ##
 ## ----------- ##
 
-configure:2098: looking for aux files: compile missing install-sh
-configure:2111:  trying ./
-configure:2140:   ./compile found
-configure:2140:   ./missing found
-configure:2122:   ./install-sh found
-configure:2272: checking for a BSD-compatible install
-configure:2345: result: /nix/store/p643r4aczmzb0dhyrx3dj592f0s5v7xj-coreutils-9.0/bin/install -c
-configure:2356: checking whether build environment is sane
-configure:2411: result: yes
-configure:2570: checking for a race-free mkdir -p
-configure:2614: result: /nix/store/p643r4aczmzb0dhyrx3dj592f0s5v7xj-coreutils-9.0/bin/mkdir -p
-configure:2621: checking for gawk
-configure:2642: found /nix/store/5zr6cb14mxl2vdcjxpyv3xw8s8rsacpb-gawk-5.1.1/bin/gawk
-configure:2653: result: gawk
-configure:2664: checking whether make sets $(MAKE)
-configure:2687: result: yes
-configure:2717: checking whether make supports nested variables
-configure:2735: result: yes
-configure:2935: checking for gcc
-configure:2967: result: gcc
-configure:3320: checking for C compiler version
-configure:3329: gcc --version >&5
+configure:2207: looking for aux files: compile missing install-sh
+configure:2220:  trying ./
+configure:2249:   ./compile found
+configure:2249:   ./missing found
+configure:2231:   ./install-sh found
+configure:2381: checking for a BSD-compatible install
+configure:2454: result: /nix/store/p643r4aczmzb0dhyrx3dj592f0s5v7xj-coreutils-9.0/bin/install -c
+configure:2465: checking whether build environment is sane
+configure:2520: result: yes
+configure:2679: checking for a race-free mkdir -p
+configure:2723: result: /nix/store/p643r4aczmzb0dhyrx3dj592f0s5v7xj-coreutils-9.0/bin/mkdir -p
+configure:2730: checking for gawk
+configure:2751: found /nix/store/5zr6cb14mxl2vdcjxpyv3xw8s8rsacpb-gawk-5.1.1/bin/gawk
+configure:2762: result: gawk
+configure:2773: checking whether make sets $(MAKE)
+configure:2796: result: yes
+configure:2826: checking whether make supports nested variables
+configure:2844: result: yes
+configure:3044: checking for gcc
+configure:3076: result: gcc
+configure:3429: checking for C compiler version
+configure:3438: gcc --version >&5
 gcc (GCC) 11.3.0
 Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:3340: $? = 0
-configure:3329: gcc -v >&5
+configure:3449: $? = 0
+configure:3438: gcc -v >&5
 Using built-in specs.
 COLLECT_GCC=/nix/store/2lr0fc0ak8rwj0k8n3shcyz1hz63wzma-gcc-11.3.0/bin/gcc
 COLLECT_LTO_WRAPPER=/nix/store/2lr0fc0ak8rwj0k8n3shcyz1hz63wzma-gcc-11.3.0/libexec/gcc/x86_64-unknown-linux-gnu/11.3.0/lto-wrapper
@@ -98,70 +98,74 @@ Configured with:
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.3.0 (GCC) 
-configure:3340: $? = 0
-configure:3329: gcc -V >&5
+configure:3449: $? = 0
+configure:3438: gcc -V >&5
 gcc: error: unrecognized command-line option '-V'
 gcc: fatal error: no input files
 compilation terminated.
-configure:3340: $? = 1
-configure:3329: gcc -qversion >&5
+configure:3449: $? = 1
+configure:3438: gcc -qversion >&5
 gcc: error: unrecognized command-line option '-qversion'; did you mean '--version'?
 gcc: fatal error: no input files
 compilation terminated.
-configure:3340: $? = 1
-configure:3329: gcc -version >&5
+configure:3449: $? = 1
+configure:3438: gcc -version >&5
 gcc: error: unrecognized command-line option '-version'
 gcc: fatal error: no input files
 compilation terminated.
-configure:3340: $? = 1
-configure:3360: checking whether the C compiler works
-configure:3382: gcc    conftest.c  >&5
-configure:3386: $? = 0
-configure:3436: result: yes
-configure:3439: checking for C compiler default output file name
-configure:3441: result: a.out
-configure:3447: checking for suffix of executables
-configure:3454: gcc -o conftest    conftest.c  >&5
-configure:3458: $? = 0
-configure:3481: result: 
-configure:3503: checking whether we are cross compiling
-configure:3511: gcc -o conftest    conftest.c  >&5
-configure:3515: $? = 0
-configure:3522: ./conftest
-configure:3526: $? = 0
-configure:3541: result: no
-configure:3546: checking for suffix of object files
-configure:3569: gcc -c   conftest.c >&5
-configure:3573: $? = 0
-configure:3595: result: o
-configure:3599: checking whether the compiler supports GNU C
-configure:3619: gcc -c   conftest.c >&5
-configure:3619: $? = 0
-configure:3629: result: yes
-configure:3640: checking whether gcc accepts -g
-configure:3661: gcc -c -g  conftest.c >&5
-configure:3661: $? = 0
-configure:3705: result: yes
-configure:3725: checking for gcc option to enable C11 features
-configure:3740: gcc  -c -g -O2  conftest.c >&5
-configure:3740: $? = 0
-configure:3758: result: none needed
-configure:3874: checking whether gcc understands -c and -o together
-configure:3897: gcc -c conftest.c -o conftest2.o
-configure:3900: $? = 0
-configure:3897: gcc -c conftest.c -o conftest2.o
-configure:3900: $? = 0
-configure:3912: result: yes
-configure:3932: checking whether make supports the include directive
-configure:3947: make -f confmf.GNU && cat confinc.out
+configure:3449: $? = 1
+configure:3469: checking whether the C compiler works
+configure:3491: gcc    conftest.c  >&5
+configure:3495: $? = 0
+configure:3545: result: yes
+configure:3548: checking for C compiler default output file name
+configure:3550: result: a.out
+configure:3556: checking for suffix of executables
+configure:3563: gcc -o conftest    conftest.c  >&5
+configure:3567: $? = 0
+configure:3590: result: 
+configure:3612: checking whether we are cross compiling
+configure:3620: gcc -o conftest    conftest.c  >&5
+configure:3624: $? = 0
+configure:3631: ./conftest
+configure:3635: $? = 0
+configure:3650: result: no
+configure:3655: checking for suffix of object files
+configure:3678: gcc -c   conftest.c >&5
+configure:3682: $? = 0
+configure:3704: result: o
+configure:3708: checking whether the compiler supports GNU C
+configure:3728: gcc -c   conftest.c >&5
+configure:3728: $? = 0
+configure:3738: result: yes
+configure:3749: checking whether gcc accepts -g
+configure:3770: gcc -c -g  conftest.c >&5
+configure:3770: $? = 0
+configure:3814: result: yes
+configure:3834: checking for gcc option to enable C11 features
+configure:3849: gcc  -c -g -O2  conftest.c >&5
+configure:3849: $? = 0
+configure:3867: result: none needed
+configure:3983: checking whether gcc understands -c and -o together
+configure:4006: gcc -c conftest.c -o conftest2.o
+configure:4009: $? = 0
+configure:4006: gcc -c conftest.c -o conftest2.o
+configure:4009: $? = 0
+configure:4021: result: yes
+configure:4041: checking whether make supports the include directive
+configure:4056: make -f confmf.GNU && cat confinc.out
 this is the am__doit target
-configure:3950: $? = 0
-configure:3969: result: yes (GNU style)
-configure:3995: checking dependency style of gcc
-configure:4107: result: gcc3
-configure:4233: checking that generated files are newer than configure
-configure:4239: result: done
-configure:4262: creating ./config.status
+configure:4059: $? = 0
+configure:4078: result: yes (GNU style)
+configure:4104: checking dependency style of gcc
+configure:4216: result: gcc3
+configure:4240: checking for strtol
+configure:4240: gcc -o conftest -g -O2   conftest.c  >&5
+configure:4240: $? = 0
+configure:4240: result: yes
+configure:4351: checking that generated files are newer than configure
+configure:4357: result: done
+configure:4380: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -178,13 +182,13 @@ generated by GNU Autoconf 2.71.  Invocation command line was
 
 on nixos
 
-config.status:836: creating src/Makefile
-config.status:836: creating config.h
-config.status:1017: config.h is unchanged
-config.status:1065: executing depfiles commands
-config.status:1142: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+config.status:838: creating Makefile
+config.status:838: creating src/Makefile
+config.status:838: creating config.h
+config.status:1067: executing depfiles commands
+config.status:1144: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make: Nothing to be done for 'am--depfiles'.
-config.status:1147: $? = 0
+config.status:1149: $? = 0
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -207,6 +211,7 @@ ac_cv_env_host_alias_set=
 ac_cv_env_host_alias_value=
 ac_cv_env_target_alias_set=
 ac_cv_env_target_alias_value=
+ac_cv_func_strtol=yes
 ac_cv_objext=o
 ac_cv_path_install='/nix/store/p643r4aczmzb0dhyrx3dj592f0s5v7xj-coreutils-9.0/bin/install -c'
 ac_cv_path_mkdir=/nix/store/p643r4aczmzb0dhyrx3dj592f0s5v7xj-coreutils-9.0/bin/mkdir
@@ -328,5 +333,6 @@ target_alias=''
 #define PACKAGE_URL ""
 #define PACKAGE "minimachine"
 #define VERSION "0.1"
+#define HAVE_STRTOL 1
 
 configure: exit 0

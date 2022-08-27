@@ -25,6 +25,7 @@ main.o: main.c \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/floatn.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/floatn-common.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdio.h \
+ /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdio2.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/stdlib.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/waitflags.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/waitstatus.h \
@@ -45,6 +46,7 @@ main.o: main.c \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/__sigset_t.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/struct_timeval.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/struct_timespec.h \
+ /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/select2.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/pthreadtypes.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/thread-shared-types.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/pthreadtypes-arch.h \
@@ -53,10 +55,13 @@ main.o: main.c \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/alloca.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdlib-bsearch.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdlib-float.h \
+ /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdlib.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/string.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/locale_t.h \
  /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/__locale_t.h \
- /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/strings.h
+ /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/strings.h \
+ /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/strings_fortified.h \
+ /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/string_fortified.h
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/stdc-predef.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/stdio.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/libc-header-start.h:
@@ -83,6 +88,7 @@ main.o: main.c \
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/floatn.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/floatn-common.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdio.h:
+/nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdio2.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/stdlib.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/waitflags.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/waitstatus.h:
@@ -103,6 +109,7 @@ main.o: main.c \
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/__sigset_t.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/struct_timeval.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/struct_timespec.h:
+/nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/select2.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/pthreadtypes.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/thread-shared-types.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/pthreadtypes-arch.h:
@@ -111,7 +118,10 @@ main.o: main.c \
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/alloca.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdlib-bsearch.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdlib-float.h:
+/nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/stdlib.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/string.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/locale_t.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/types/__locale_t.h:
 /nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/strings.h:
+/nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/strings_fortified.h:
+/nix/store/k3d8wqlsnmm5270zd19cbs26g7wifxj6-glibc-2.34-210-dev/include/bits/string_fortified.h:

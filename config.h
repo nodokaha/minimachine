@@ -1,6 +1,9 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Define to 1 if you have the `strtol' function. */
+#define HAVE_STRTOL 1
+
 /* Name of package */
 #define PACKAGE "minimachine"
 
