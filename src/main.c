@@ -30,12 +30,12 @@ int main(void){
     {
       switch(code[x]){
       case '+':  op[deps] = ADD; printf("op: add, deps : %d\n", deps); NUM_INIT(); break;
-      case '-':  op[deps] = SUB; printf("op: sub, deps : %d\n", deps); NUM_INIT(); break;
+      case '-':  if(isdigit(code[x+1]) != 0){ num[i++] = '-'; break; }; op[deps] = SUB; printf("op: sub, deps : %d\n", deps); NUM_INIT(); break;
       case '*':  op[deps] = MUL; printf("op: mul, deps : %d\n", deps); NUM_INIT(); break;
       case '/':  op[deps] = DIV; printf("op: div, deps : %d\n", deps); NUM_INIT(); break;
       case '(': ndi[deps]=nd; printf("ndi: %d\n", ndi[deps]); deps++; nd=0; break;
       case ')': n[deps][nd++]=strtol(num, NULL, 10); printf("push %ld\n", n[deps][nd-1]); NUM_INIT(); for(int i=0; i<nd; i++){ printf("%ld : %d\n", n[deps][i], deps); }; if(deps>0){ deps--; }else{ printf("Error!"); return -1; } nd=ndi[deps]; printf("ndi: %d\n", ndi[deps]); if(code[x+1] == ' '){ x++; break; } break;
-      case ' ': if(isdigit(code[x-1]) != 0){n[deps][nd++]=strtol(num, NULL, 10); NUM_INIT();}; break;
+      case ' ': if(isdigit(code[x-1]) != 0){n[deps][nd++]=strtol(num, NULL, 10); NUM_INIT(); printf("push %ld\n", n[deps][nd-1]);}; break;
       case '0': num[i++] = '0'; break;
       case '1': num[i++] = '1'; break;
       case '2': num[i++] = '2'; break;
@@ -51,9 +51,14 @@ int main(void){
     }
   printf("compile end!\n");
   for(int m=1; m<10; m++){
-      for(int j=0; j<10; j++){
-	printf("ndi[deps] %d : deps : %d [op %d] : %ld\n", ndi[m], m, op[m], n[m][j]);
+    int stack=0;
+    if(op[m] != 0){
+      switch(op[m]){
+      case 1:	stack=0; for(int j=0; j<10; j++){ stack += n[m][j]; }; printf("stack = %d\n", stack); break;
+      case 2:   stack=n[m][0]; for(int j=1; j<10; j++){ stack -= n[m][j]; }; printf("stack = %d\n", stack); break;
+      default : printf("Error!");
+	}
       }
     }
-  return 0;
+   return 0;
 }
