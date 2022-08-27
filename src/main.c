@@ -15,13 +15,14 @@ int main(void){
   char num[100];
   num[100] = '\0';
   char *nump;
-  int i=0, op[50], deps=0, nd=0, ndi[50];
+  int i=0, op[50], deps=0, ndpx=0, ndpy=0, ndx[50], ndy[50];
   for(int i=0; i<50; i++)
     {
       op[i] = NULL;
-      ndi[i] = NULL;
+      ndx[i] = NULL;
+      ndy[i] = NULL;
     }
-  long n[100][50];
+  long n[100][50][50];
   fscanf(stdin, "%[^\n]", code);
   puts(code);
   puts("\n");
@@ -33,9 +34,9 @@ int main(void){
       case '-':  if(isdigit(code[x+1]) != 0){ num[i++] = '-'; break; }; op[deps] = SUB; printf("op: sub, deps : %d\n", deps); NUM_INIT(); break;
       case '*':  op[deps] = MUL; printf("op: mul, deps : %d\n", deps); NUM_INIT(); break;
       case '/':  op[deps] = DIV; printf("op: div, deps : %d\n", deps); NUM_INIT(); break;
-      case '(': if(isdigit(code[x-1]) != 0){ n[deps][nd++]=strtol(num, NULL, 10); printf("push %ld\n", n[deps][nd-1]); NUM_INIT();} n[deps][nd++] = 0; printf("push %ld (deps++)\n", n[deps][nd-1]); ndi[deps]=nd; printf("ndi: %d\n", ndi[deps]); deps++; nd=0; break;
-      case ')': if(isdigit(code[x-1]) != 0){ n[deps][nd++]=strtol(num, NULL, 10); printf("push %ld\n", n[deps][nd-1]); NUM_INIT();}; for(int i=0; i<nd; i++){ printf("%ld : %d\n", n[deps][i], deps); }; if(deps>0){ deps--; }else{ printf("Error!"); return -1; } nd=ndi[deps]; printf("ndi: %d\n", ndi[deps]); if(code[x+1] == ' '){ x++; break; } break;
-      case ' ': if(isdigit(code[x-1]) != 0){n[deps][nd++]=strtol(num, NULL, 10); NUM_INIT(); printf("push %ld\n", n[deps][nd-1]);}; break;
+      case '(': if(isdigit(code[x-1]) != 0){ n[deps][ndpx][ndpy++]=strtol(num, NULL, 10); printf("push %ld\n", n[deps][ndpx][ndpy-1]); NUM_INIT();} n[deps][ndpx][ndpy++] = 0; printf("push %ld (deps++)\n", n[deps][ndpx][ndpy-1]); ndy[deps]=ndpy; printf("ndy: %d\n", ndy[deps]); deps++; ndpy=0; break;
+      case ')': if(isdigit(code[x-1]) != 0){ n[deps][ndpx][ndpy++]=strtol(num, NULL, 10); printf("push %ld\n", n[deps][ndpx][ndpy-1]); NUM_INIT();}; for(int i=0; i<ndpy; i++){ printf("%ld : %d\n", n[deps][ndpx][i], deps); }; if(deps>0){ deps--; }else{ printf("Error!"); return -1; } ndpy=ndy[deps]; printf("ndy: %d\n", ndy[deps]); if(code[x+1] == ' '){ x++; break; } break;
+      case ' ': if(isdigit(code[x-1]) != 0){n[deps][ndpx][ndpy++]=strtol(num, NULL, 10); NUM_INIT(); printf("push %ld\n", n[deps][ndpx][ndpy-1]);}; break;
       case '0': num[i++] = '0'; break;
       case '1': num[i++] = '1'; break;
       case '2': num[i++] = '2'; break;
@@ -50,16 +51,16 @@ int main(void){
       }
     }
   printf("compile end!\n");
-  for(int m=1; m<10; m++){
-    int stack=0;
-    if(op[m] != 0){
-      switch(op[m]){
-      case 1:	stack=0; for(int j=0; j<10; j++){ stack += n[m][j]; printf("%d\n", n[m][j]); }; printf("stack = %d\n", stack); break;
-      case 2:   stack=n[m][0]; for(int j=1; j<10; j++){ stack -= n[m][j]; printf("%d\n", n[m][j-1]); }; printf("stack = %d\n", stack); break;
-      case 3:   stack=1; for(int j=0; n[m][j] != 0; j++){ stack *= n[m][j]; printf("%d\n", n[m][j]); }; printf("stack = %d\n", stack); break;
-      default : printf("Error!");
-	}
-      }
-    }
+  /* for(int m=1; m<10; m++){ */
+  /*   int stack=0; */
+  /*   if(op[m] != 0){ */
+  /*     switch(op[m]){ */
+  /*     case 1:	stack=0; for(int j=0; j<10; j++){ stack += n[0][m][j]; printf("%d\n", n[0][m][j]); }; printf("stack = %d\n", stack); break; */
+  /*     case 2:   stack=n[m][0]; for(int j=1; j<10; j++){ stack -= n[0][m][j]; printf("%d\n", n[0][m][j-1]); }; printf("stack = %d\n", stack); break; */
+  /*     case 3:   stack=1; for(int j=0; n[m][j] != 0; j++){ stack *= n[0][m][j]; printf("%d\n", n[0][m][j]); }; printf("stack = %d\n", stack); break; */
+  /*     default : printf("Error!"); */
+  /* 	} */
+  /*     } */
+  /*   } */
    return 0;
 }
