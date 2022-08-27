@@ -51,16 +51,16 @@ int main(void){
       }
     }
   printf("compile end!\n");
-  /* for(int m=1; m<10; m++){ */
-  /*   int stack=0; */
-  /*   if(op[m] != 0){ */
-  /*     switch(op[m]){ */
-  /*     case 1:	stack=0; for(int j=0; j<10; j++){ stack += n[0][m][j]; printf("%d\n", n[0][m][j]); }; printf("stack = %d\n", stack); break; */
-  /*     case 2:   stack=n[m][0]; for(int j=1; j<10; j++){ stack -= n[0][m][j]; printf("%d\n", n[0][m][j-1]); }; printf("stack = %d\n", stack); break; */
-  /*     case 3:   stack=1; for(int j=0; n[m][j] != 0; j++){ stack *= n[0][m][j]; printf("%d\n", n[0][m][j]); }; printf("stack = %d\n", stack); break; */
-  /*     default : printf("Error!"); */
-  /* 	} */
-  /*     } */
-  /*   } */
+  for(int m=1; m<10; m++){
+    int stack=0;
+    if(op[m] != 0){
+      switch(op[m]){
+      case 1:	stack=0; for(int j=0; j<10; j++){ stack += n[m][0][j]; printf("%d\n", n[m][0][j]); }; printf("stack = %d\n", stack); break;
+      case 2:   stack=n[m][0][0]; for(int j=1; j<10; j++){ stack -= n[m][0][j]; printf("%d\n", n[m][0][j-1]); }; printf("stack = %d\n", stack); break;
+      case 3:   stack=1; for(int j=0; n[m][0][j] != 0; j++){ stack *= n[m][0][j]; printf("%d\n", n[m][0][j]); }; printf("stack = %d\n", stack); break;
+      default : printf("Error!");
+	}
+      }
+    }
    return 0;
 }
