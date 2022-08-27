@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void){
+	char code[1000];
+	fscanf(stdin, "%[^\n]", code);
+	printf(code);
+	puts("\n");
+	for(int x=0; x<1000 && code[x] != NULL; x++)
+	{
+		switch(code[x]){
+			case '1': printf("add\n"); break;
+			case '2': printf("sub\n"); break;
+			default: printf("not support!\n"); break;
+		}
+	}
+	
+	return 0;
+}
