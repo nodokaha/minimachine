@@ -26,7 +26,6 @@ int main(void){
   fscanf(stdin, "%[^\n]", code);
   puts(code);
   puts("\n");
-  //10+20*5 -> MUL * MUL -> NUM + NUM * MUL -> NUM + NUM * NUM
   for(int x=0; x<1000 && code[x] != NULL; x++)
     {
       switch(code[x]){
